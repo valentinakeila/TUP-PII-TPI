@@ -37,6 +37,8 @@ def ejemplares_prestados():
     return ""
 
 
+
+
 def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
     # completar
@@ -52,10 +54,31 @@ def prestar_ejemplar_libro():
     # completar
     return None
 
+# 2) Gestionar devolución
+# El bibliotecario debe ingresar el código del libro. Se valida que el mismo exista y tenga
+# ejemplares prestados, en caso contrario se muestra error.
+# Para confirmar la devolución se muestra un mensaje y se actualiza la cantidad de
+# ejemplares prestados.
 
 def devolver_ejemplar_libro():
-    # completar
-    return None
+    encontrado = 0
+    print("Estoy funcionando :)")
+    buscar_codigo = input("\n Ingrese el codigo del libro a buscar: ")
+    for busqueda in libros: #usamos la variable busqueda para buscar en libros y que la muestre abajo
+        if buscar_codigo == busqueda['cod'] and busqueda['cant_ej_pr'] > 0:
+            encontrado = 1
+            print("Devolución realizada")
+            busqueda['cant_ej_pr'] = busqueda['cant_ej_pr'] - 1
+            busqueda['cant_ej_stock'] = busqueda['cant_ej_stock'] + 1
+            print("Cantidad actual de ejemplares prestados: ", busqueda['cant_ej_pr'])
+            print("Cantidad actual de stock: ", busqueda['cant_ej_stock'])
+
+
+            
+    if encontrado == 0:
+        print("Código incorrecto o no hay ejemplares prestados")
+    
+    return ""
 
 
 def nuevo_libro():

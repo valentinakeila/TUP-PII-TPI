@@ -25,7 +25,7 @@ while respuesta != "salir":
             
             print(ejemplares_prestados())
         elif int(opt) == 2:
-            #completar
+            print
             print()
         elif int(opt) == 3:
             #completar
