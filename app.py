@@ -1,7 +1,9 @@
 # Trabajo Práctico I - Programación II
 
-
+import bibloteca
 import os
+
+from bibloteca import *
 
 print("Bienvenido!")
 respuesta = ''
@@ -17,11 +19,11 @@ def menu():
 while respuesta != "salir":
     menu()
     opt = input("\n Ingrese la opción de menú: ")
-    os.system ("cls") #Limpiar pantalla
+    # os.system ("cls") #Limpiar pantalla
     if opt.isnumeric():
         if int(opt) == 1:
-            #completar
-            print()
+            
+            print(ejemplares_prestados())
         elif int(opt) == 2:
             #completar
             print()
