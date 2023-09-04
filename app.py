@@ -10,10 +10,10 @@ respuesta = ''
 
 def menu():
     print("1 - Gestionar Prestamo")
-    print("2 - Gestionar Devolucion")
+    print("2 - Gestionar Devolución")
     print("3 - Registrar nuevo libro")
-    print("4 - Elimiar ejemplar")
-    print("5 - Mostrar ejemplares perstados")
+    print("4 - Eliminar ejemplar")
+    print("5 - Mostrar ejemplares prestados")
     print("6 - Salir")
 
 while respuesta != "salir":
@@ -23,19 +23,16 @@ while respuesta != "salir":
     if opt.isnumeric():
         if int(opt) == 1:
             
-            print(ejemplares_prestados())
+            print(prestar_ejemplar_libro())
         elif int(opt) == 2:
-            print
-            print()
+            print(devolver_ejemplar_libro())
+           
         elif int(opt) == 3:
-            #completar
-            print()
+            print(registrar_nuevo_libro())
         elif int(opt) == 4:
-            #completar
-            print()
+            print(eliminar_ejemplar_libro())
         elif int(opt) == 5:
-            #completar
-            print()
+            print(ejemplares_prestados())
         elif int(opt) == 6:
             respuesta = "salir"
         else: print("Ingrese una opción válida")
