@@ -1,4 +1,7 @@
 # Trabajo Práctico I - Programación II
+#Nicolas Cataldi
+#Geraldine Corvalán
+#Valentina Keila Garrido
 
 import bibloteca
 import os
@@ -19,20 +22,22 @@ def menu():
 while respuesta != "salir":
     menu()
     opt = input("\n Ingrese la opción de menú: ")
+    #Comentamos el cls porque no funcionaba bien en nuestras terminales
     # os.system ("cls") #Limpiar pantalla
+    #Pusimos las llmadas de las funciones en el menu
     if opt.isnumeric():
         if int(opt) == 1:
             
-            print(prestar_ejemplar_libro())
+            prestar_ejemplar_libro()
         elif int(opt) == 2:
-            print(devolver_ejemplar_libro())
+            devolver_ejemplar_libro()
            
         elif int(opt) == 3:
-            print(registrar_nuevo_libro())
+            registrar_nuevo_libro()
         elif int(opt) == 4:
-            print(eliminar_ejemplar_libro())
+            eliminar_ejemplar_libro()
         elif int(opt) == 5:
-            print(ejemplares_prestados())
+            ejemplares_prestados()
         elif int(opt) == 6:
             respuesta = "salir"
         else: print("Ingrese una opción válida")
